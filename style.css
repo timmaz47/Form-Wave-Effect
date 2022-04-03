@@ -17,7 +17,7 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: steelblue;
+  background-color: rgba(250, 128, 114, 0.815);
   color: #fff;
 }
 
@@ -59,7 +59,7 @@ body {
 .form-control input:focus,
 .form-control input:valid {
   outline: 0;
-  border-bottom-color: lightblue;
+  border-bottom-color: violet;
 }
 
 .form-control label {
@@ -80,12 +80,12 @@ body {
 .form-control input:focus + label span,
 .form-control input:valid + label span,
 .form-control input:not(:placeholder-shown) + label span {
-  color: lightblue;
+  color: violet;
   transform: translateY(-30px);
 }
 
 .btn {
-  background-color: lightblue;
+  background-color: violet;
   width: 100%;
   padding: 15px;
   margin-bottom: 2rem;
@@ -111,6 +111,6 @@ body {
 }
 
 .text a {
-  color: lightblue;
+  color: violet;
   text-decoration: none;
 }
