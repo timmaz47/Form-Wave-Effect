@@ -5,3 +5,5 @@ Once the user clicks the input field the label transitions upwards with a delay 
 If left blank the label goes back to original position.
 
 Facing an issue only with Chrome where the label is not transitioning. Firefox and Microsoft Edge works as intended..
+
+View the page here: https://htmlpreview.github.io/?https://github.com/timmaz47/Form-Wave-Effect/blob/main/index.html
