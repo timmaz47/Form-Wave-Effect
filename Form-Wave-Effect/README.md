@@ -6,4 +6,4 @@ If left blank the label goes back to original position.
 
 Facing an issue only with Chrome where the label is not transitioning. Firefox and Microsoft Edge works as intended..
 
-View the page here: https://github.com/timmaz47/Mini-Projects/blob/main/Form-Wave-Effect/index.html
+View the page here: https://htmlpreview.github.io/?https://github.com/timmaz47/Mini-Projects/blob/main/Form-Wave-Effect/index.html
