@@ -4,4 +4,4 @@ The aim of the game is to guess the random number (between 1 and 20) in as few a
 
 The number is randomly generated every time.
 
-You can play the game here: 
+You can play the game here: https://bit.ly/numberGuessingGame
