@@ -81,7 +81,7 @@ body {
 .form-control input:valid + label span,
 .form-control input:not(:placeholder-shown) + label span {
   color: violet;
-  transform: translateY(-30px);
+  transform: translateY(-40px);
 }
 
 .btn {
