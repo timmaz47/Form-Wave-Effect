@@ -17,16 +17,24 @@ document.querySelector('.guess').value = 13;
 console.log(document.querySelector('.guess').value);
 */
 
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 50) + 1;
 let score = 20;
 let highscore = 0;
 
 const displayMessage = function (message) {
-  document.querySelector('.message').textContent = message;
+  // document.querySelector('.left').querySelector('.message').textContent =
+  //   message;
+  // document.querySelector('.right').querySelector('.message').textContent =
+  //   message;
+  const messages = document.querySelectorAll('.message');
+  messages.forEach(msg => {
+    msg.textContent = message;
+  });
 };
 
 const displayScore = function (score) {
   document.querySelector('.score').textContent = score;
+  document.querySelector('.score').style.color = '#FFA500';
 };
 
 const displayNumber = function (number, width) {
@@ -67,14 +75,19 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-document.querySelector('.again').addEventListener('click', function () {
-  score = 20;
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
-  displayScore(score);
-  displayMessage('Start guessing...');
-  displayNumber('?', '15rem');
-  document.querySelector('body').style.backgroundColor = '#222';
-  document.querySelector('.guess').value = '';
+const newGames = document.querySelectorAll('.again');
+
+newGames.forEach(newGame => {
+  newGame.addEventListener('click', function () {
+    score = 20;
+    secretNumber = Math.trunc(Math.random() * 50) + 1;
+    displayScore(score);
+    document.querySelector('.score').style.color = '#fff';
+    displayMessage('Start guessing...');
+    displayNumber('?', '15rem');
+    document.querySelector('body').style.backgroundColor = '#222';
+    document.querySelector('.guess').value = '';
+  });
 });
 
 /* Longer Method

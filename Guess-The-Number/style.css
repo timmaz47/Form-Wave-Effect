@@ -147,6 +147,7 @@ main .again {
   }
 
   main .again {
+    display: block;
     margin: 5rem 0 2rem;
   }
 
