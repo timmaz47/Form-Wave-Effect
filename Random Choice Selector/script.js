@@ -11,7 +11,7 @@ textarea.addEventListener("keyup", (e) => {
   createChoices(e.target.value);
 
   // If enter is pressed clear the text area and keep choices showing. Also run the randomSelect function
-  if (e.key === "Enter") {
+  if (e.key === "Enter" || e.code === 13) {
     setTimeout(() => {
       e.target.value = "";
     }, 10);
