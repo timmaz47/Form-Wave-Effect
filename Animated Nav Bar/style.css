@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+:root {
+  --bg-1: rgb(239, 6, 115);
+  --bg-2: rgb(201, 29, 235);
+  --btn: rgb(80, 152, 152);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-1);
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-1) 0%,
+    var(--bg-1) 50%,
+    var(--bg-2) 50%,
+    var(--bg-2) 100%
+  );
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+#nav {
+  width: 80px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: width 1s linear;
+}
+
+#nav.active {
+  width: 300px;
+}
+
+#nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 1s linear;
+}
+
+#nav.active ul {
+  width: 100%;
+}
+
+#nav ul li {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-right: 1em;
+  opacity: 0;
+  transform: rotateY(0deg);
+  transition: opacity 1s linear, transform 1s linear;
+}
+
+#nav.active ul li {
+  opacity: 100%;
+  transform: rotateY(360deg);
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  gap: 0.2em;
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+#nav .lines {
+  background-color: var(--btn);
+  height: 2px;
+  width: 20px;
+  border-radius: 10px;
+  transform: rotate(0deg);
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 1s linear;
+}
+
+#nav .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+#nav.active .line1 {
+  transform: rotate(765deg) translateY(5.5px);
+}
+
+#nav.active .line2 {
+  transform: rotate(-765deg) translateY(-5.5px);
+}
