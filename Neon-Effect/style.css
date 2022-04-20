@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+:root {
+  --neon: #00ff00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Style the body to have centered text */
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Style the button */
+button {
+  font-size: 4rem;
+
+  background: transparent;
+  outline: none;
+  border: 4px solid var(--neon);
+  border-radius: 10px;
+  padding: 0.3em 1em;
+  color: var(--neon);
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+
+  box-shadow: 0.025em 0.025em 0.2em var(--neon),
+    inset 0.025em 0.025em 0.2em var(--neon);
+
+  text-shadow: 0.025em 0.025em 0.06em var(--neon), 0.02em 0.02em 0.05em #fff;
+}
+
+/* Add before pseudo-element for bottom shadow */
+button::before {
+  content: "";
+  background-color: var(--neon);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+
+  position: absolute;
+  top: 130%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.4);
+  filter: blur(1em);
+}
+
+/* Add after pseudo-element for on-hover shadow */
+button::after {
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 1em 0.1em var(--neon);
+  transition: opacity 0.3s ease;
+}
+
+/* Add hover/focus styles to button */
+button:hover,
+button:focus {
+  background-color: var(--neon);
+  color: #000;
+  opacity: 1;
+  font-weight: 700;
+  text-shadow: 0.025em 0.025em 0.06em #000, 0.02em 0.02em 0.05em #fff;
+}
+
+/* Add hover/focus styles to pseduo-elements */
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+  transform: perspective(1.1em) rotateX(40deg) scale(1, 0.5);
+}
+
+button:hover::after,
+button:focus::after {
+  opacity: 1;
+}
