@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+:root {
+  /* --primary-color: #2f4f4f; */
+  --primary-color: #2e94b9;
+  --secondary-color: #faf8f8;
+  --tertiary-color: #9b5de5;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,12 +25,12 @@ body {
   text-align: center;
   height: 100vh;
   overflow: hidden;
-  background-color: darkslategrey;
+  background-color: var(--primary-color);
   padding: 20px;
 }
 
 .container {
-  background-color: rgb(250, 248, 248);
+  background-color: var(--secondary-color);
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 50px 20px;
@@ -33,34 +40,37 @@ body {
 
 .container h3 {
   font-weight: bold;
-  opacity: 0.5;
-  letter-spacing: 2px;
-  font-size: 1.7rem;
+  color: var(--primary-color);
+  opacity: 0.8;
+  letter-spacing: 0.1em;
+  font-size: 2rem;
 }
 
 .joke {
   font-size: 2.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.02em;
   line-height: 40px;
   margin: 50px auto;
-  color: blueviolet;
+  color: var(--tertiary-color);
   max-width: 600px;
 }
 
 .btn {
-  background-color: blueviolet;
+  background-color: var(--tertiary-color);
   padding: 15px 40px;
-  color: rgb(250, 248, 248);
+  color: var(--secondary-color);
   border-radius: 10px;
   border: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.05em;
   font-weight: 700;
   margin-bottom: 20px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .btn:focus {
