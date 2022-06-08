@@ -3,14 +3,13 @@
 const jokeEl = document.getElementById("joke");
 const jokeBtn = document.getElementById("jokeBtn");
 
-generateJoke();
+// generateJoke();
 
 jokeBtn.addEventListener("click", generateJoke);
 
-/* --- Using ASYNC AWAIT method (cleaner more popular than .then method */
-// Whenever you use await within a function you have to label that function async
+/* Using ASYNC/AWAIT */
 async function generateJoke() {
-  // As per icanhazdadjoke instructions - different for each API
+  // As per icanhazdadjoke instructions
   const config = {
     headers: {
       Accept: "application/json",
@@ -24,9 +23,10 @@ async function generateJoke() {
   // Place whatever you get back from response.json() into a variable
   const data = await response.json();
   jokeEl.innerHTML = data.joke;
+  jokeBtn.innerText = "Get Another Joke";
 }
 
-/* ---- Using .then method ----
+/* ---- Using Promises ----
 function generateJoke() {
   // As per icanhazdadjoke instructions - different for each API
   const config = {
