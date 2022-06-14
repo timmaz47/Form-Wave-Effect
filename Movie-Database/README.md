@@ -1,4 +1,7 @@
-I built this movie database using an API available from: https://www.themoviedb.org/ 
+You can preview the app at the following link: https://htmlpreview.github.io/?https://github.com/timmaz47/Mini-Projects/blob/main/Movie-Database/index.html
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+I built this movie database app using an API available from: https://www.themoviedb.org/ 
 
 The page displays by default the current most popular movies by showing any available poster for that movie, it's title and rating.
 Hovering over a movie tile will display an Overview/summary for that movie.
