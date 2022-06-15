@@ -124,15 +124,17 @@ main {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   max-height: 100%;
+  overflow-y: scroll;
   visibility: hidden;
   transform: translateY(100%);
   transition: transform 0.5s ease-in;
 }
 
 .pageNumbers {
+  max-width: 80%;
   display: flex;
   justify-content: center;
-  margin: 3rem 0 0;
+  margin: 5rem auto 0;
 }
 
 .pageNumbers ul {
@@ -205,3 +207,20 @@ main {
 .pageNumbers button:active {
   background-color: #7378c5;
 } */
+
+/* Fix Pagination on small screens */
+@media only screen and (max-width: 600px) {
+  .pageNumbers ul li {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+
+  .pageNumbers ul li.btn {
+    padding: 0 0.5rem;
+  }
+
+  .pageNumbers ul li.numb {
+    height: 2rem;
+    width: 2rem;
+  }
+}
